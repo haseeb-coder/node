@@ -1,0 +1,6 @@
+{
+    "env":{
+        "Mongo_ATLS_pw": "node-shop-rest",
+        "JWT_KEY": "secret"
+    }
+}

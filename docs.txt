@@ -1,0 +1,83 @@
+REST API is the standard way to send and receive data for web services.
+
+A client sends a req which first goes to the rest API and then to the database to get or put 
+the data after that,it will again go to the rest API and then to the client.
+Using an API is just like using a website in a browser,
+ but instead of clicking on buttons,
+we write code to req data from the server. 
+It's incredibly adaptable and can handle multiple types of requests
+
+What Is REST API?
+REST (Representational state transfer) is a popular architecture that is used to create web services.
+
+API (Application Programming Interface is a code that allows two software programs to communicate with each other.
+
+REST API is a software that allows two apps to communicate with one another over the internet and through numerous devices.
+
+HTTP Request Types
+HTTP Requests are simply messages that are sent by the client to do some tasks on the server
+
+GET - Get command is used to request data from the server, but mainly this method is used to read data
+PATCH - This command is used to update, change or replace the data
+POST - The post method is used to create new or to edit already existing data
+Delete - This delete command is used to delete the data completely from the server
+
+Successful responses
+200 OK
+202 Accepted
+203 Non-Authoritative Information
+204 No Content
+
+Redirection messages
+300 Multiple Choices
+301 Moved Permanently
+302 Found
+303 See Other
+304 Not Modified
+
+Client error responses
+400 Bad Request
+401 Unauthorized
+402 Payment Required Experimental
+403 Forbidden
+404 Not Found
+
+Server error responses
+500 Internal Server Error
+501 Not Implemented
+502 Bad Gateway
+503 Service Unavailable
+504 Gateway Timeout
+
+
+CORS
+
+The Cross-Origin Resource Sharing standard works by adding new HTTP headers that let servers 
+describe which origins are permitted to read that information from a web browser. 
+Additionally, for HTTP request methods that can cause side-effects on 
+server data (in particular, HTTP methods other than GET, or POST with certain MIME types), 
+the specification mandates that browsers "preflight" the request, 
+soliciting supported methods from the server with the HTTP 
+OPTIONS request method, and then, upon "approval" from the server, sending the actual request. 
+Servers can also inform clients whether "credentials" (such as Cookies and HTTP Authentication) 
+should be sent with requests.
+
+CORS failures result in errors but for security reasons, 
+specifics about the error are not available to JavaScript. 
+All the code knows is that an error occurred. 
+The only way to determine what specifically went wrong is to look at the browser's console for details.
+
+
+
+Express body-parser is an npm module used to process data sent in an HTTP request body. 
+It provides four express middleware for parsing JSON, Text, URL-encoded, and raw data sets over an HTTP request body.
+Before the target controller receives an incoming request, these middleware routines handle it.
+
+
+Before parsing, it was just a regular string that could not access the data encoded inside, but after parsing, 
+it becomes a JavaScript object where it can access the various data within.
+
+What Is Body-parser?
+Body-parser parses is an HTTP request body that usually helps when you need to know more than just the URL being hit.
+Specifically in the context of a POST, PATCH, or PUT HTTP request where the information you want is contained in the body.
+Using body-parser allows you to access req.body from within routes and use that data.
